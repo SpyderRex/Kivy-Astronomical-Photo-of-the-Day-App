@@ -7,7 +7,7 @@ from kivy.uix.popup import Popup
 import requests
 
 layout = FloatLayout()
-response = requests.get("https://api.nasa.gov/planetary/apod?api_key=G6AVpNb3am09sy8TtJEte7PGv75HeMEq8je6SLJz")
+response = requests.get("https://api.nasa.gov/planetary/apod?api_key=API_KEY") #Visit the NASA API website to get an API key
 image = AsyncImage(source=str(response.json()["url"]), size_hint=(1, .5), pos_hint={"center_y": .5})
 layout.add_widget(image)
 
